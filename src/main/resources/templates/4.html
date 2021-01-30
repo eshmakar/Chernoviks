@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning JavaScript</title>
+    <script type="text/javascript">
+        function valid(form) { /*проверка введенных данных*/
+            var value1 = form.value1.value; /*обращаемся на - <input type="text" name="name" placeholder="Имя" id="name"/><br/><br/>*/
+            var value2 = form.value2.value;
+
+            // / - открывающие, закрывающие символы, "0-9a-z_-" - либо должны быть цифры, либо буквы, тире, знак подчеркивания
+            // после этого должно присутствовать знак собачки, потом тоже самое, потом должна быть точка, потом буквы от 2 до 5
+            // i - в конце указывает, что не важен регистр
+
+
+            // if (value1 != "" || value1 != " " value2 != "" || value2 != " " ) /*если пустое имя или только пробел*/
+            if (value1 < value2) {
+                for (; ; value1++) {
+                    document.write("<br>" + value1)
+                }
+
+            } else if (value1 > value2) {
+                for (; ; value1--) {
+                    document.write("<br>" + value1)
+                }
+            }
+        }
+
+    </script>
+</head>
+
+
+<body>
+<form action="" method="post" name="test" id="form"> <!-- this - означает, что будем использовать функцию valid(form)-->
+    <label for="value1">ОТ:</label>
+    <input type="text" name="value1" placeholder="Введите начальную цифру" id="value1"/><br/><br/>
+    <label for="value2">ДО:</label>
+    <input type="text" name="value2" placeholder="Введите конечную цифру" id="value2"/><br/><br/>
+
+    <input type="button" onclick="valid(document.getElementById('form'))" value="Готово"/>
+    <!--submit - кнопка отправления (Готово)-->
+
+</form>
+</body>
+</html>
