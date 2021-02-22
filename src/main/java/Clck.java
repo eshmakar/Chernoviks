@@ -11,7 +11,7 @@ public class Clck {
     public static void randd() {
         int leftLimit = 48; // symbol '0'
         int rightLimit = 122; // letter 'z'
-        int targetStringLength = 5; //кол-во букв в сайте
+        int targetStringLength = 3; //кол-во букв в сайте
         Random random = new Random();
         StringBuilder buffer = new StringBuilder(targetStringLength);
 
@@ -25,7 +25,7 @@ public class Clck {
 
         String generatedString = buffer.toString();
         generatedString = generatedString.replace("_", "").replace("-", "").replace("\\", "").replace("[", "").replace("^", "").replace("?", "").replace("/", "").replace(".", "").replace("@", "").replace("=", "").replace(">", "").replace("<", "").replace(";", "").replace(":", "").replace("]", "").replace("`", "");
-        String url = "https://clck.ru/" + generatedString; //переобразует в ссылку
+        String url = "https://clck.ru/TL" + generatedString; //переобразует в ссылку
         String blank = "_blank";
 
         char dm = (char) 34; // символ двойные кавычки, чтобы составить html тег
