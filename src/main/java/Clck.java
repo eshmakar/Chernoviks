@@ -25,7 +25,7 @@ public class Clck {
 
         String generatedString = buffer.toString();
         generatedString = generatedString.replace("_", "").replace("-", "").replace("\\", "").replace("[", "").replace("^", "").replace("?", "").replace("/", "").replace(".", "").replace("@", "").replace("=", "").replace(">", "").replace("<", "").replace(";", "").replace(":", "").replace("]", "").replace("`", "");
-        String url = "https://clck.ru/TL" + generatedString; //переобразует в ссылку
+        String url = "https://clck.ru/TQ" + generatedString; //переобразует в ссылку
         String blank = "_blank";
 
         char dm = (char) 34; // символ двойные кавычки, чтобы составить html тег
