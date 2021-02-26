@@ -1,5 +1,7 @@
+import java.io.IOException;
+
 public class UgadatBukvu {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         char ch, ignore, answer = 'K';
         do {
             System.out.println("Задумана буква из диапазона A-Z\nПопытайтесь его угадать: ");
